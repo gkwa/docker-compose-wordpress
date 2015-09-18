@@ -1,7 +1,10 @@
-all: wordpress/wp-config.php
-all: wordpress/Dockerfile
-all: wordpress/docker-compose.yml
-all: wordpress/router.php
+test: files
+	cd wordpress && docker-compose up
+
+files: wordpress/wp-config.php
+files: wordpress/Dockerfile
+files: wordpress/docker-compose.yml
+files: wordpress/router.php
 
 wordpress/router.php:
 	cp router.php $@
