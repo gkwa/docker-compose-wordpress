@@ -18,5 +18,11 @@ wordpress/wp-config.php: wordpress
 wordpress/Dockerfile: wordpress
 	cp Dockerfile $@
 
-wordpress:
-	curl https://wordpress.org/latest.tar.gz | tar -xzf -
+wordpress: latest.tar.gz
+	cat latest.tar.gz | tar -xzf -
+
+latest.tar.gz:
+	curl -O https://wordpress.org/latest.tar.gz
+
+clean:
+	rm -rf wordpress
