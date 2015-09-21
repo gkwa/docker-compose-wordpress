@@ -19,4 +19,4 @@ wordpress/Dockerfile: wordpress
 	cp Dockerfile $@
 
 wordpress:
-	curl https://wordpress.org/latest.tar.gz | tar -xvzf -
+	curl https://wordpress.org/latest.tar.gz | tar -xzf -
