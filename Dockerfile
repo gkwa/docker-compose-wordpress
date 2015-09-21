@@ -1,2 +1,2 @@
-FROM taylorm/ubuntu-emacs
+FROM FROM orchardup/php5
 ADD . /code
